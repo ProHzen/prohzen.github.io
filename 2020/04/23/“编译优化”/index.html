@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>“编译优化” | PurchMan</title>
+  <title>编译优化 | PurchMan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post.">
+  <meta name="description" content="千千工程的编译时间研究">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“编译优化”">
+<meta property="og:title" content="编译优化">
 <meta property="og:url" content="http://yoursite.com/2020/04/23/%E2%80%9C%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96%E2%80%9D/index.html">
 <meta property="og:site_name" content="PurchMan">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post.">
+<meta property="og:description" content="千千工程的编译时间研究">
 <meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtxwLR.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JNp6YV.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/04/23/JaN4Yj.png">
@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JN108U.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JN8fje.png">
 <meta property="article:published_time" content="2020-04-23T07:59:48.000Z">
-<meta property="article:modified_time" content="2020-04-23T08:08:40.195Z">
+<meta property="article:modified_time" content="2020-04-23T12:18:06.046Z">
 <meta property="article:author" content="PurchMan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s1.ax1x.com/2020/04/22/JtxwLR.png">
@@ -63,7 +63,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="http://pic.17qq.com/uploads/fpbpedfpjz.jpeg" class="js-avatar">
+			<img src="/image/logo.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">PurchMan</a></h1>
@@ -123,7 +123,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="http://pic.17qq.com/uploads/fpbpedfpjz.jpeg" class="js-avatar">
+				<img src="/image/logo.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">PurchMan</h1>
@@ -181,7 +181,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      “编译优化”
+      编译优化
     </h1>
   
 
@@ -194,8 +194,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文主要是针对千千工程编译时间的研究。分为两个方面，一方面是不考虑混淆代码，只是单纯的打个debug包；另一方面是考虑混淆的情况，例如prelease、release包等</p>
-<a id="more"></a>
+        <a id="more"></a>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文主要是针对千千工程编译时间的研究。分为两个方面，一方面是不考虑混淆代码，只是单纯的打个debug包；另一方面是考虑混淆的情况，例如prelease、release包等</p>
 <h3 id="开发中编译，不进行混淆"><a href="#开发中编译，不进行混淆" class="headerlink" title="开发中编译，不进行混淆"></a>开发中编译，不进行混淆</h3><p>随着Android Stduio版本的迭代，增量编译的速度已经很快了。在不采用第三方增量编译方法的前提下，只能是通过配置一些gradle的参数去改善。其实像许多盛极一时的编译工具：阿里的freeline、开源项目fastdex、收费工具JRebel for Android等都是两三年前的框架，现在都停止维护了。所以也就不考虑引入第三方增量编译工具测试了。</p>
 <h4 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h4><ul>
 <li>gradle版本为4.10.1，gradle plugin版本为3.2.1</li>
